@@ -21,9 +21,10 @@ function Contact() {
 
     if (res.success) {
       Swal.fire({
-        title: "Message Sent!",
-        text: "Successfully sent to Vishnu's Mail!",
-        icon: "success"
+        icon: "Sent",
+        title: "Successfully sent to Vishnu's Mail !",
+        showConfirmButton: false,
+        timer: 1500
       });
     }
   };
