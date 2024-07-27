@@ -1,5 +1,5 @@
 import styles from './ContactStyles.module.css';
-
+import Swal from 'sweetalert2'
 function Contact() {
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -20,7 +20,11 @@ function Contact() {
     }).then((res) => res.json());
 
     if (res.success) {
-      console.log("Success", res);
+      Swal.fire({
+        title: "Message Sent!",
+        text: "Successfully sent to Vishnu's Mail!",
+        icon: "success"
+      });
     }
   };
   return (
